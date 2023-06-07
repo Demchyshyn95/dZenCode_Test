@@ -1,21 +1,24 @@
-import { IProduct, ISelect, products as defaultProducts, Selection } from "../../costants";
-import React, { FC, useCallback, useMemo, useState } from 'react';
+import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
+import { ProductsStateContext } from "../../providers/ProductsProvider";
+import { IProduct, ISelect, Selection } from "../../costants";
 import { getProductSelection } from "./config";
-import Profit from "./Profit..component";
+import Profit from "./Profit.component";
 
 const ProfitPage: FC = () => {
-	const [products, setProducts] = useState<IProduct[]>(defaultProducts);
+	const { state } = ProductsStateContext();
+
+	const [products, setProducts] = useState<IProduct[]>(state.products);
+
+	useEffect(() => {
+		setProducts(state.products)
+	}, [state.products]);
 
 	const productsSpecification: ISelect[] = useMemo(() => getProductSelection(Selection.SPECIFICATION), []);
 	const productsType: ISelect[] = useMemo(() => getProductSelection(Selection.TYPE), []);
 
 	const onSelect = useCallback((parameter: Selection, value: string) => {
-		setProducts(defaultProducts.filter(el => parameter.toUpperCase() === Selection.TYPE.toUpperCase()
+		setProducts(products.filter(el => parameter.toUpperCase() === Selection.TYPE.toUpperCase()
 			? el.type.toUpperCase() === value.toUpperCase() : el.specification.toUpperCase() === value.toUpperCase()));
-	}, [defaultProducts]);
-
-	const onRemoveItem = useCallback((itemId: number) => {
-		setProducts(products.filter(el => el.id != itemId));
 	}, [products]);
 
 	return (
@@ -24,7 +27,6 @@ const ProfitPage: FC = () => {
 				{
 					productsSpecification,
 					productsType,
-					onRemoveItem,
 					onSelect,
 					products
 				}

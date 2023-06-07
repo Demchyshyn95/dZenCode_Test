@@ -1,20 +1,12 @@
-import {
-	Container,
-	HeaderContainer,
-	Title,
-	StyledSelect,
-	SelectorContainer,
-	TitleSelect,
-	ListContainer
-} from "./styles";
+import { Container, HeaderContainer, Title, StyledSelect, SelectorContainer, TitleSelect, ListContainer } from "./styles";
+import ProductPage from "../../components/general/Product/Product.page";
 import { Selection } from "../../costants";
 import { ComponentProps } from "./types";
 import React, { FC, memo } from 'react';
-import ProductPage from "../../components/general/Product/Product.page";
 
 const Profit: FC<ComponentProps> = (props: ComponentProps) => {
 	const { productsType, productsSpecification, products } = props; // data
-	const { onSelect, onRemoveItem } = props; // func
+	const { onSelect } = props; // func
 
 	return (
 		<Container>
@@ -44,7 +36,6 @@ const Profit: FC<ComponentProps> = (props: ComponentProps) => {
 			<ListContainer>
 				{ products.map(el => (
 					<ProductPage
-						onRemoveItem={ onRemoveItem }
 						item={ el }
 						key={ el.id }
 					/>

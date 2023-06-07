@@ -9,12 +9,33 @@ export const Container = styled.div`
 	height: 100px;
 `;
 
+export const Content = styled.div`
+	position: absolute;
+	display: flex;
+	flex-direction: column;
+	top: 30%;
+	left: 35%;
+	height: 250px;
+	width: 600px;
+	background: white;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	::after {
+		position: fixed;
+		content: "";
+		background-color: rgba(0,0,0,0.5);
+		width: 150%;
+		height: 110%;
+	}
+`;
+
 export const HeaderContainer = styled.div``;
 
 export const StyledCloseCircleFilled = styled(CloseCircleFilled)`
-	font-size: 20px;
+	font-size: 30px;
 	position: absolute;
-	right: -12px;
+	right: -15px;
 	top: -15px;
 `;
 export const FirstBlock = styled.div`
@@ -31,25 +52,12 @@ export const SecondBlock = styled.div`
 	justify-content: right;
 	align-items: center;
 	position: relative;
-	background: greenyellow;
+	background: #67a807;
 	z-index: 20;
 	height: 50%;
 	width: 100%;
 `;
-export const Content = styled.div`
-	position: absolute;
-	display: flex;
-	flex-direction: column;
-	top: 30%;
-	left: 35%;
-	height: 250px;
-	width: 600px;
-	background: white;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	z-index: 1;
-`;
+
 export const Title = styled.span`
 	font-size: 14px;
 	font-weight: 600;
@@ -58,6 +66,7 @@ export const Title = styled.span`
 `;
 export const HeaderTitle = styled(Title)`
 	font-size: 18px;
+	padding: 10px;
 `;
 
 export const CancelBtn = styled(Button)`
@@ -73,6 +82,8 @@ export const RemoveBtn = styled(CancelBtn)`
 	color: red;
 	margin-right: 20px;
 	width: 200px;
+	display: flex;
+	align-items: center;
 `;
 
 export const StyledIcon = styled(DeleteTwoTone)`

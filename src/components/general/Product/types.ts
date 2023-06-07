@@ -5,9 +5,8 @@ export interface ComponentProps extends PageProps {
 	isShowModal: boolean;
 	onCancel: () => void;
 	onRemove: () => void;
-};
+}
 
 export interface PageProps {
-	onRemoveItem?: (id: number) => void;
 	item: IProduct;
 }

@@ -3,7 +3,7 @@ import ErrorPage from "../components/general/Error/Error.page.";
 import { Routes, Route, Navigate } from 'react-router-dom';
 import ProductsPage from "../pages/Products/Products.page";
 import SettingsPage from "../pages/Settings/Settings.page";
-import ProfitPage from "../pages/Profit/Profit..page";
+import ProfitPage from "../pages/Profit/Profit.page";
 import GroupsPage from "../pages/Groups/Groups.page";
 import { RoutesURL } from "./types";
 import React, { FC } from "react";
