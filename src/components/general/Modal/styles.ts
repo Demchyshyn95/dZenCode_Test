@@ -54,7 +54,7 @@ export const SecondBlock = styled.div`
 	position: relative;
 	background: #67a807;
 	z-index: 20;
-	height: 50%;
+	height: 100px;
 	width: 100%;
 `;
 
@@ -65,7 +65,7 @@ export const Title = styled.span`
 	padding-left: 10px;
 `;
 export const HeaderTitle = styled(Title)`
-	font-size: 18px;
+	font-size: 20px;
 	padding: 10px;
 `;
 
@@ -83,7 +83,7 @@ export const RemoveBtn = styled(CancelBtn)`
 	margin-right: 20px;
 	width: 200px;
 	display: flex;
-	align-items: center;
+	align-items: inherit;
 `;
 
 export const StyledIcon = styled(DeleteTwoTone)`

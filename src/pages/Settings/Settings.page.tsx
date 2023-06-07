@@ -1,14 +1,7 @@
 import Home from "./Settings.component";
-/*eslint-disable*/
-const SettingsPage = () => {
-    console.log("Home page init");
-    return (
-        <Home
-            {...{
+import React, { FC } from "react";
+import Settings from "./Settings.component";
 
-            }}
-        />
-    )
-}
+const SettingsPage: FC = () => <Settings/>
 
 export default SettingsPage;

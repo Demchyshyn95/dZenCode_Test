@@ -1,12 +1,5 @@
-import { Container } from "./styles";
-import React from 'react';
+import React, { FC } from 'react';
 
-const Users = () => {
-	return (
-		<Container>
-			{"Users"}
-		</Container>
-	);
-};
+const Users: FC = () => <></>
 
 export default Users;

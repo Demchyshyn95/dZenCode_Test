@@ -4,4 +4,4 @@ export interface PageProps {
 export interface ComponentProps extends PageProps {
 	timeToday: string;
 	pathname: string;
-};
+}

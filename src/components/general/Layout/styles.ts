@@ -74,8 +74,8 @@ export const StyledAvatar = styled(Logo)`
 	height: 150px;
 `;
 
-export const StyledLink = styled(Link)<{ isactive: boolean }>`
-	border-bottom: ${({ isactive })  => (isactive ? "5px solid #000" : "none") };
+export const StyledLink = styled(Link)<{ selected: boolean }>`
+	border-bottom: ${({ selected })  => (selected ? "5px solid #000" : "none") };
 `;
 
 export const TimeContainer = styled.div`

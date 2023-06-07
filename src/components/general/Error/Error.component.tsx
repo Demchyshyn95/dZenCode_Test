@@ -1,5 +1,5 @@
-import React, { FC } from 'react';
 import { StyledResult } from "./styles";
+import React, { FC } from 'react';
 
 const Error: FC = () => {
 	return (

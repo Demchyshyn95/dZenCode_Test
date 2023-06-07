@@ -5,6 +5,7 @@ import ProductsPage from "../pages/Products/Products.page";
 import SettingsPage from "../pages/Settings/Settings.page";
 import ProfitPage from "../pages/Profit/Profit.page";
 import GroupsPage from "../pages/Groups/Groups.page";
+import UsersPage from "../pages/Users/Users.page";
 import { RoutesURL } from "./types";
 import React, { FC } from "react";
 
@@ -30,7 +31,7 @@ const RootPage: FC = (): React.ReactElement => {
 						/>
 						<Route
 							path={ RoutesURL.USERS }
-							element={ <GroupsPage/> }
+							element={ <UsersPage/> }
 						/>
 						<Route
 							path={ RoutesURL.ERROR }

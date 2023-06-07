@@ -1,12 +1,6 @@
-import StandWithUkraine from "./Groups.component";
+import Groups from "./Groups.component";
 import React, { FC } from 'react';
 
-const GroupsPage: FC = () => {
-	console.log("GroupsPage");
-
-	return (
-		<StandWithUkraine/>
-	);
-};
+const GroupsPage: FC = () => <Groups/>
 
 export default GroupsPage;

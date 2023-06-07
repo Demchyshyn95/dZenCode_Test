@@ -1,12 +1,5 @@
-import { Container } from "./styles";
 import React, { FC } from "react";
 
-const Groups: FC = () => {
-	return (
-		<Container>
-			{"Groops"}
-		</Container>
-	);
-};
+const Groups: FC = () => <></>
 
 export default Groups;

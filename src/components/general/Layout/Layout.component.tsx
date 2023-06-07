@@ -38,7 +38,7 @@ const Layout: FC<ComponentProps> = (props: ComponentProps) => {
 					<MenuItem>
 						{ MainMenu.map(({ key, title, link }) => (
 							<StyledLink
-								isactive={ pathname.toUpperCase() === link.toUpperCase() }
+								selected={ pathname.toUpperCase() === link.toUpperCase() }
 								key={ key }
 								to={ link }
 							>

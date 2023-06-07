@@ -1,5 +1,4 @@
 export enum RoutesURL {
-    BASE = "/",
     ERROR = "/error",
     PROFIT = "/profit",
     GROUPS = "/groups",
