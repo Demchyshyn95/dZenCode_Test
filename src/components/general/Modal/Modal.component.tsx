@@ -6,7 +6,6 @@ import React, { FC } from 'react';
 
 const ModalComponent: FC<ComponentProps> = (props: ComponentProps) => {
 	const { onRemove, onCancel } = props; // func
-	const { item } = props; // data
 
 	return (
 			<Content>
@@ -19,22 +18,32 @@ const ModalComponent: FC<ComponentProps> = (props: ComponentProps) => {
 							onClick={ onCancel }
 						/>
 					</HeaderContainer>
-					<Container>
-						<Circle
-							isNew={ item.isNew }
-						/>
-						<Logo
-							src={ item.photo }
-						/>
-						<DescriptionContainer>
-							<Title>
-								{ item.title }
-							</Title>
-							<Title>
-								{ item.type }
-							</Title>
-						</DescriptionContainer>
-					</Container>
+					{ props.product ? (
+						<Container>
+							<Circle
+								isNew={ props.product.isNew }
+							/>
+							<Logo
+								src={ props.product.photo }
+							/>
+							<DescriptionContainer>
+								<Title>
+									{ props.product.title }
+								</Title>
+								<Title>
+									{ props.product.type }
+								</Title>
+							</DescriptionContainer>
+						</Container>
+					) : (
+						<Container>
+							<DescriptionContainer>
+								<Title>
+									{ props.order?.title }
+								</Title>
+							</DescriptionContainer>
+						</Container>
+					)}
 				</FirstBlock>
 				<SecondBlock>
 					<CancelBtn

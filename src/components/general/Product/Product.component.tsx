@@ -64,7 +64,7 @@ const ProductComponent: FC<ComponentProps> = (props: ComponentProps) => {
 					{
 						onRemove,
 						onCancel,
-						item
+						product: item
 					}
 				}
 			/> }

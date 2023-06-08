@@ -1,13 +1,49 @@
 import { ProductsActions, ProductsActionType, ProductsReducer, ProductsReducerState } from "./ProductsTypes";
+import { products } from "../../costants";
 
 export const productsInitialState: ProductsReducerState = {
+	orders: [
+		{
+			id: 1,
+			title: 'Order 1',
+			date: '2017-06-29 12:09:33',
+			description: 'desc',
+			price: [
+				{ value: 1200, symbol: 'USD', isDefault: 0 },
+				{ value: 2600, symbol: 'UAH', isDefault: 1 }
+			],
+			getProducts: () => products
+		},
+		{
+			id: 2,
+			title: 'Order 2',
+			date: '2017-06-29 12:09:33',
+			description: 'desc',
+			price: [
+				{ value: 1200, symbol: 'USD', isDefault: 0 },
+				{ value: 2600, symbol: 'UAH', isDefault: 1 }
+			],
+			getProducts: () => products
+		},
+		{
+			id: 3,
+			title: 'Order 3',
+			date: '2017-06-29 12:09:33',
+			description: 'desc',
+			price: [
+				{ value: 1200, symbol: 'USD', isDefault: 0 },
+				{ value: 2600, symbol: 'UAH', isDefault: 1 }
+			],
+			getProducts: () => products
+		}
+	],
 	products: [
 		{
 			id: 1,
 			serialNumber: 1234,
 			isNew: false,
 			photo: require(`../../assets/images/monitor-xiaomi-mi-display-redmi-1a-23.8-2.jpg`),
-			title: 'ProductComponent 1',
+			title: 'OrderComponent 1',
 			type: 'Monitor1',
 			status: "Free",
 			specification: 'Specification 1',
@@ -27,7 +63,7 @@ export const productsInitialState: ProductsReducerState = {
 			serialNumber: 1234,
 			isNew: true,
 			photo: require(`../../assets/images/monitor-xiaomi-mi-display-redmi-1a-23.8-2.jpg`),
-			title: 'ProductComponent 2',
+			title: 'OrderComponent 2',
 			type: 'Monitor2',
 			status: "Progress",
 			specification: 'Specification 2',
@@ -47,7 +83,7 @@ export const productsInitialState: ProductsReducerState = {
 			serialNumber: 12234,
 			isNew: false,
 			photo: require(`../../assets/images/monitor-xiaomi-mi-display-redmi-1a-23.8-2.jpg`),
-			title: 'ProductComponent 3',
+			title: 'OrderComponent 3',
 			type: 'Monitor3',
 			status: "Free",
 			specification: 'Specification 3',
@@ -70,10 +106,10 @@ export const productReducer: ProductsReducer = (state: ProductsReducerState = pr
 		case ProductsActionType.SetNewProducts: {
 			return {
 				...state,
-				products: state.products.filter( el => el.id != action.payload)
+				products: state.products.filter(el => el.id != action.payload)
 			};
 		}
-		
+
 		default: {
 			return state;
 		}

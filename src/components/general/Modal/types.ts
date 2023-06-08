@@ -1,7 +1,8 @@
-import { IProduct } from "../../../costants";
+import { IOrder, IProduct } from "../../../costants";
 
 export interface ComponentProps {
 	onRemove: () => void;
 	onCancel: () => void;
-	item: IProduct;
+	product?: IProduct;
+	order?: IOrder;
 }

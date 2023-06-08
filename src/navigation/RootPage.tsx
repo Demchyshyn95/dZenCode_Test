@@ -1,10 +1,9 @@
 import LayoutPage from "../components/general/Layout/LayoutPage";
 import ErrorPage from "../components/general/Error/Error.page.";
 import { Routes, Route, Navigate } from 'react-router-dom';
-import ProductsPage from "../pages/Products/Products.page";
 import SettingsPage from "../pages/Settings/Settings.page";
-import ProfitPage from "../pages/Profit/Profit.page";
-import GroupsPage from "../pages/Groups/Groups.page";
+import ProductsPage from "../pages/Products/Products.page";
+import ParishesPage from "../pages/Parishes/Parishes.page";
 import UsersPage from "../pages/Users/Users.page";
 import { RoutesURL } from "./types";
 import React, { FC } from "react";
@@ -14,16 +13,12 @@ const RootPage: FC = (): React.ReactElement => {
 				<LayoutPage>
 					<Routes>
 						<Route
-							path={ RoutesURL.PROFIT }
-							element={ <ProfitPage/> }
-						/>
-						<Route
 							path={ RoutesURL.PRODUCTS }
 							element={ <ProductsPage/> }
 						/>
 						<Route
-							path={ RoutesURL.GROUPS }
-							element={ <GroupsPage/> }
+							path={ RoutesURL.PARISHES }
+							element={ <ParishesPage/> }
 						/>
 						<Route
 							path={ RoutesURL.SETTINGS }
@@ -38,7 +33,7 @@ const RootPage: FC = (): React.ReactElement => {
 							element={ <ErrorPage/> }
 						/>
 						<Route
-							element={ <Navigate to={ RoutesURL.PROFIT } replace/> }
+							element={ <Navigate to={ RoutesURL.PARISHES } replace/> }
 							path={ "*" }
 						/>
 					</Routes>

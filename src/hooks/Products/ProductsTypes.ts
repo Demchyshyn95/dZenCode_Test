@@ -1,7 +1,8 @@
 /* REDUCER STATE */
-import { IProduct } from "../../costants";
+import { IOrder, IProduct } from "../../costants";
 
 export interface ProductsReducerState {
+	orders: IOrder[]
 	products: IProduct[]
 }
 
