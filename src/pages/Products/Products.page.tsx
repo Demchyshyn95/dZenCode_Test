@@ -1,5 +1,5 @@
 import React, { FC, useCallback, useEffect, useMemo, useState } from 'react';
-import { ProductsStateContext } from "../../providers/ProductsProvider";
+import { ProductsStateContext } from "../../providers/Provider";
 import { IProduct, ISelect, Selection } from "../../costants";
 import { getProductSelection } from "./config";
 import Products from "./Products.component";

@@ -1,4 +1,4 @@
-import { CloseCircleFilled, DeleteTwoTone } from "@ant-design/icons";
+import { CloseCircleTwoTone, DeleteTwoTone } from "@ant-design/icons";
 import styled from "styled-components";
 import { Button } from "antd";
 
@@ -32,8 +32,8 @@ export const Content = styled.div`
 
 export const HeaderContainer = styled.div``;
 
-export const StyledCloseCircleFilled = styled(CloseCircleFilled)`
-	font-size: 30px;
+export const StyledCloseCircleFilled = styled(CloseCircleTwoTone)`
+	font-size: 32px;
 	position: absolute;
 	right: -15px;
 	top: -15px;
@@ -59,7 +59,7 @@ export const SecondBlock = styled.div`
 `;
 
 export const Title = styled.span`
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: 600;
 	text-transform: none;
 	padding-left: 10px;

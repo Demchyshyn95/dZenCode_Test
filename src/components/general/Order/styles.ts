@@ -1,4 +1,4 @@
-import { DeleteOutlined, UnorderedListOutlined } from "@ant-design/icons";
+import { DeleteOutlined, PicRightOutlined } from "@ant-design/icons";
 import styled from "styled-components";
 
 export const Container = styled.div`
@@ -33,7 +33,7 @@ export const DeleteIcon = styled(DeleteOutlined)`
 	cursor: pointer;
 `;
 
-export const IconData = styled(UnorderedListOutlined)`
+export const IconData = styled(PicRightOutlined)`
 	font-size: 20px;
 	cursor: pointer;
 `;

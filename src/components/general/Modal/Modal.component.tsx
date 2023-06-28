@@ -12,9 +12,10 @@ const ModalComponent: FC<ComponentProps> = (props: ComponentProps) => {
 				<FirstBlock>
 					<HeaderContainer>
 						<HeaderTitle>
-							{"Вы уверены, что хотите удалить етот приход?"}
+							{`Вы уверены, что хотите удалить етот ${props.product ? "продукт" : "приход"}?`}
 						</HeaderTitle>
 						<StyledCloseCircleFilled
+							twoToneColor={"silver"}
 							onClick={ onCancel }
 						/>
 					</HeaderContainer>

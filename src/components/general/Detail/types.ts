@@ -1,13 +1,14 @@
-import { IOrder } from "../../../costants";
+import { IOrder, IProduct } from "../../../costants";
 
 export interface ComponentProps extends PageProps {
-	changeViewDetail: (value: boolean) => void;
 	onShowModal: () => void;
 	isShowModal: boolean;
 	onCancel: () => void;
 	onRemove: () => void;
+	products: IProduct[];
+	orders: IOrder[];
 }
 
 export interface PageProps {
-	item: IOrder;
+	setIsShowDetail: (value: boolean) => void;
 }

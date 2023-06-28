@@ -1,11 +1,11 @@
-import { ProductsActionsContext } from '../../../providers/ProductsProvider';
+import { ProductsActionsContext } from '../../../providers/Provider';
 import React, { FC, useCallback, useState } from 'react';
-import OrderComponent from "./Order.component";
+import Order from "./Order.component";
 import { PageProps } from "./types";
 
 const OrderPage: FC<PageProps> = (props: PageProps) => {
 	const { item } = props; // data
-	const { setNewProducts } = ProductsActionsContext();
+	const { removeOrder, changeViewDetail } = ProductsActionsContext();
 
 	const [isShowModal, setIsShowModal] = useState<boolean>(false);
 
@@ -19,12 +19,13 @@ const OrderPage: FC<PageProps> = (props: PageProps) => {
 
 	const onRemove = useCallback(() => {
 		setIsShowModal(false);
-		setNewProducts(item.id)
+		removeOrder(item.id)
 	}, [item]);
 
 	return (
-		<OrderComponent
+		<Order
 			{...{
+				changeViewDetail,
 				isShowModal,
 				onShowModal,
 				onRemove,

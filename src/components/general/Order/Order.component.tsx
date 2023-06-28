@@ -5,17 +5,18 @@ import { ComponentProps } from "./types";
 import React, { FC, memo } from 'react';
 import moment from "moment";
 
-const OrderComponent: FC<ComponentProps> = (props: ComponentProps) => {
-	const { onRemove, onShowModal, onCancel } = props; // func
+const Order: FC<ComponentProps> = (props: ComponentProps) => {
+	const { onRemove, onShowModal, onCancel, changeViewDetail } = props; // func
 	const { item, isShowModal } = props; // data
 
 	return (
 		<Container>
-				<Title>
-					{ item.title }
-				</Title>
+			<Title>
+				{ item.title }
+			</Title>
 			<IconData
 				title={ "Show more" }
+				onClick={ () => changeViewDetail(true) }
 			/>
 			<PriceContainer>
 				{
@@ -53,4 +54,4 @@ const OrderComponent: FC<ComponentProps> = (props: ComponentProps) => {
 	);
 };
 
-export default memo(OrderComponent);
+export default memo(Order);

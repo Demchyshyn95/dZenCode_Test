@@ -1,11 +1,11 @@
-import { ProductsProvider } from "../providers/ProductsProvider";
+import { Provider } from "../providers/Provider";
 import RootPage from "../navigation/RootPage";
 import * as React from "react";
 import { FC } from "react";
 
 const App: FC = () =>
-	<ProductsProvider>
+	<Provider>
 		<RootPage/>
-	</ProductsProvider>
+	</Provider>
 
 export default App;
